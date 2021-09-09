@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="contact-form" action="#">
+            <p class="contact-form__title">Задать вопрос</p>
+            <div>
+                <input name="name" type="text" required pattern="^[А-Яа-яЁё\s\-]+$" class="contact-form__input_name" placeholder="Фамилия Имя Отчество *">
+                <div class="contact-form__error_name"></div>
+            </div>
+            <div>
+                <input name="phone" type="tel" required pattern="^[ 0-9\-\+]+$" class="contact-form__input_tel" placeholder="Телефон *">
+                <div class="contact-form__error_tel"></div>
+            </div>
+            <div>
+                <input name="email" type="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" class="contact-form__input_email" placeholder="Email">
+                <div class="contact-form__error_email"></div>
+            </div>
+            <button class="contact-form__button" type="submit">ОТПРАВИТЬ ЗАПРОС</button>
+        </form>        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="mail.js"></script>
+</body>
+</html>
